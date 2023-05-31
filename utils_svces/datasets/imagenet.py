@@ -11,7 +11,7 @@ DEFAULT_TEST_BATCHSIZE = 128
 
 def get_imagenet_labels(path_base=None):
     path = get_imagenet_path(path_base)
-    dataset = datasets.ImageNet(path, split='val', transform='none')
+    dataset = datasets.ImageNet(path, split='validation', transform='none')
     classes_extended = dataset.classes
     labels = []
     for a in classes_extended:
